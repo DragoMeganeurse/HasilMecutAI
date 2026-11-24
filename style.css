@@ -138,6 +138,51 @@ img {
   margin-top: 3px;
 }
 
+.nav-links {
+  display: flex;
+  gap: 28px;
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.nav-links a {
+  padding: 6px 0;
+  border-bottom: 1.5px solid transparent;
+  color: var(--text-main);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--terracotta);
+}
+
+.nav-links a.active {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+  font-weight: 500;
+}
+
+.galeri-more-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--terracotta);
+  white-space: nowrap;
+}
+
+.galeri-more-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 560px) {
+  .nav-links {
+    gap: 16px;
+    font-size: 13px;
+  }
+  .brand-sub {
+    display: none;
+  }
+}
+
 .nav-wishlist-btn {
   display: inline-flex;
   align-items: center;
