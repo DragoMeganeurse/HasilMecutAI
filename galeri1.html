@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galeri Nusantara — Jelajah Nusantara</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="galeri1.css" />
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <header class="navbar">
+      <a href="#" class="logo">
+        <span class="logo-icon" aria-hidden="true">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M16 8l-2.5 5.5L8 16l2.5-5.5L16 8z" />
+          </svg>
+        </span>
+        <span>
+          <strong>jelajah nusantara</strong>
+          <small>CATATAN DARI KEPULAUAN</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="../detail1Rev/index.html">Destinasi</a>
+        <a href="#" class="active" aria-current="page">Galeri</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ========== HERO + FOTO UNGGULAN ========== -->
+      <section class="hero">
+        <div class="hero-top">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow-line"></span>GALERI NUSANTARA
+            </p>
+            <h1>
+              Sejauh mata memandang,<br /><span>seluas cerita terbentang.</span>
+            </h1>
+          </div>
+
+          <div class="hero-side">
+            <p>
+              Sepotong keindahan, sekelumit kehidupan. Menyusuri Indonesia
+              melalui lensa para penjelajah.
+            </p>
+            <!-- Angka diisi otomatis oleh JavaScript dari data foto -->
+            <p class="hero-stats">
+              <strong><span id="statPhotos">0</span> foto</strong>
+              <i></i>
+              <span><span id="statPlaces">0</span> destinasi</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="featured" id="featured">
+          <div class="featured-img" id="featuredImg"></div>
+
+          <span class="badge">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"
+              />
+            </svg>
+            PILIHAN REDAKSI
+          </span>
+
+          <div class="featured-caption">
+            <p class="featured-place" id="featuredPlace"></p>
+            <h2 id="featuredTitle"></h2>
+            <p class="featured-credit" id="featuredCredit"></p>
+          </div>
+
+          <!-- Sekarang berupa tombol yang membuka lightbox, bukan link kosong -->
+          <button type="button" class="featured-link" id="featuredOpen">
+            Perbesar foto
+            <span class="circle-btn" aria-hidden="true">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="slider-bar">
+          <div class="counter">
+            <b id="slideNow">01</b>
+            <span class="counter-line"></span>
+            <span id="slideTotal">04</span>
+          </div>
+
+          <p class="tagline">Satu negeri. Tak terhitung sudut pandang.</p>
+
+          <div class="arrows">
+            <button type="button" id="prevBtn" aria-label="Foto sebelumnya">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M19 12H5M11 6l-6 6 6 6" />
+              </svg>
+            </button>
+            <button type="button" id="nextBtn" aria-label="Foto berikutnya">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== GALERI ========== -->
+      <section class="gallery">
+        <div class="gallery-head">
+          <div>
+            <p class="eyebrow small">TEMUKAN SUDUT PANDANGMU</p>
+            <h2 class="gallery-title">Indonesia, dalam bingkai.</h2>
+          </div>
+          <p class="gallery-desc">
+            Dari puncak berkabut hingga dasar laut, setiap bingkai menyimpan
+            sebuah perjalanan.
+          </p>
+        </div>
+
+        <!-- Filter kategori (role="group", bukan tablist) -->
+        <div
+          class="chips"
+          id="chips"
+          role="group"
+          aria-label="Filter kategori foto"
+        >
+          <button
+            type="button"
+            class="chip active"
+            data-cat="all"
+            aria-pressed="true"
+          >
+            Semua foto <sup id="chipAllCount">0</sup>
+          </button>
+          <button
+            type="button"
+            class="chip"
+            data-cat="Laut &amp; pulau"
+            aria-pressed="false"
+          >
+            Laut &amp; pulau
+          </button>
+          <button
+            type="button"
+            class="chip"
+            data-cat="Gunung &amp; hutan"
+            aria-pressed="false"
+          >
+            Gunung &amp; hutan
+          </button>
+          <button
+            type="button"
+            class="chip"
+            data-cat="Budaya &amp; warisan"
+            aria-pressed="false"
+          >
+            Budaya &amp; warisan
+          </button>
+          <button
+            type="button"
+            class="chip"
+            data-cat="Alam terbuka"
+            aria-pressed="false"
+          >
+            Alam terbuka
+          </button>
+          <button
+            type="button"
+            class="chip"
+            data-cat="Keseharian"
+            aria-pressed="false"
+          >
+            Keseharian
+          </button>
+        </div>
+
+        <div class="toolbar">
+          <label class="select-wrap">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+            <select id="destSelect" aria-label="Filter destinasi">
+              <option value="all">Semua destinasi</option>
+            </select>
+          </label>
+
+          <div class="toolbar-right">
+            <label class="select-wrap sort">
+              <span>Urutkan:</span>
+              <select id="sortSelect" aria-label="Urutkan foto">
+                <option value="redaksi">Pilihan redaksi</option>
+                <option value="judul">Judul A–Z</option>
+                <option value="fotografer">Fotografer A–Z</option>
+              </select>
+            </label>
+            <span class="divider"></span>
+            <button
+              type="button"
+              class="icon-btn"
+              id="viewBtn"
+              aria-label="Ubah tampilan grid"
+            >
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="4" y="4" width="6" height="6" />
+                <rect x="14" y="4" width="6" height="6" />
+                <rect x="4" y="14" width="6" height="6" />
+                <rect x="14" y="14" width="6" height="6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Kartu foto dibuat oleh JavaScript -->
+        <div class="masonry" id="masonry"></div>
+        <p class="empty" id="empty" hidden>
+          Belum ada foto untuk pilihan ini. Coba kategori atau destinasi lain.
+        </p>
+
+        <div class="more" id="moreWrap">
+          <button type="button" class="more-btn" id="moreBtn">
+            Jelajahi lebih banyak foto
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M12 5v14M6 13l6 6 6-6" />
+            </svg>
+          </button>
+          <p class="more-info" id="moreInfo"></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== LIGHTBOX ========== -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button
+        type="button"
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Tutup"
+      >
+        &times;
+      </button>
+      <figure>
+        <!-- Pakai <img> supaya foto tampil utuh sesuai orientasinya -->
+        <img class="lightbox-img" id="lightboxImg" alt="" />
+        <figcaption id="lightboxCap"></figcaption>
+      </figure>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="galeri1.js"></script>
+  </body>
+</html>
