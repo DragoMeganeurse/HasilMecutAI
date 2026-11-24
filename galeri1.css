@@ -555,7 +555,8 @@ h1 span {
 
 @media (max-width: 860px) {
   .nav-links {
-    display: none;
+    gap: 18px;
+    font-size: 14px;
   }
   .hero-top,
   .gallery-head {
@@ -579,7 +580,8 @@ h1 span {
   .featured-link {
     font-size: 0;
   }
-  .tagline {
+  .tagline,
+  .logo small {
     display: none;
   }
   .toolbar {
