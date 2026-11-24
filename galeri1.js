@@ -18,25 +18,25 @@ $(function () {
 
   const slides = [
     {
-      img: "images/raja-ampat.jpg",
+      img: "raja-ampat.jpg",
       place: "RAJA AMPAT, PAPUA BARAT DAYA",
       title: "Di antara seribu pulau",
       credit: "Lensa Aditya Pratama, Kepulauan Wayag",
     },
     {
-      img: "images/bromo-slide.jpg",
+      img: "bromo-slide.jpg",
       place: "PROBOLINGGO, JAWA TIMUR",
       title: "Fajar di atas lautan awan",
       credit: "Lensa Rizky Ramadhan, Gunung Bromo",
     },
     {
-      img: "images/sumba-slide.jpg",
+      img: "sumba-slide.jpg",
       place: "SUMBA TIMUR, NUSA TENGGARA TIMUR",
       title: "Bukit yang bernapas pelan",
       credit: "Lensa Fajar Saputra, Wairinding",
     },
     {
-      img: "images/banda-slide.jpg",
+      img: "banda-slide.jpg",
       place: "KEPULAUAN BANDA, MALUKU",
       title: "Sunyi di kedalaman biru",
       credit: "Lensa Nadia Putri, Laut Banda",
@@ -46,7 +46,7 @@ $(function () {
   // "ratio" = tinggi dibanding lebar (supaya kartu punya tinggi berbeda-beda)
   const photos = [
     {
-      img: "images/bromo.jpg",
+      img: "bromo.jpg",
       cat: "Gunung & hutan",
       title: "Pagi yang pelan di Bromo",
       place: "Jawa Timur",
@@ -54,7 +54,7 @@ $(function () {
       ratio: 0.75,
     },
     {
-      img: "images/bali.jpg",
+      img: "bali.jpg",
       cat: "Gunung & hutan",
       title: "Hijau yang tak pernah usai",
       place: "Tegalalang, Bali",
@@ -62,7 +62,7 @@ $(function () {
       ratio: 1.12,
     },
     {
-      img: "images/sumba.jpg",
+      img: "sumba.jpg",
       cat: "Alam terbuka",
       title: "Menanti senja di tanah Sumba",
       place: "Bukit Wairinding, Sumba",
@@ -70,7 +70,7 @@ $(function () {
       ratio: 0.72,
     },
     {
-      img: "images/borobudur.jpg",
+      img: "borobudur.jpg",
       cat: "Budaya & warisan",
       title: "Bisik batu, jejak waktu",
       place: "Magelang, Jawa Tengah",
@@ -78,7 +78,7 @@ $(function () {
       ratio: 1.0,
     },
     {
-      img: "images/banda.jpg",
+      img: "banda.jpg",
       cat: "Laut & pulau",
       title: "Dunia lain di bawah biru",
       place: "Kepulauan Banda, Maluku",
@@ -86,7 +86,7 @@ $(function () {
       ratio: 0.72,
     },
     {
-      img: "images/waerebo.jpg",
+      img: "waerebo.jpg",
       cat: "Budaya & warisan",
       title: "Rumah di atas awan",
       place: "Wae Rebo, Nusa Tenggara Timur",
@@ -94,7 +94,7 @@ $(function () {
       ratio: 1.0,
     },
     {
-      img: "images/foto-7.jpg",
+      img: "foto-7.jpg",
       cat: "Laut & pulau",
       title: "Perahu menjemput pagi",
       place: "Labuan Bajo, NTT",
@@ -102,7 +102,7 @@ $(function () {
       ratio: 0.8,
     },
     {
-      img: "images/foto-8.jpg",
+      img: "foto-8.jpg",
       cat: "Keseharian",
       title: "Pasar sebelum matahari naik",
       place: "Ubud, Bali",
@@ -110,7 +110,7 @@ $(function () {
       ratio: 1.0,
     },
     {
-      img: "images/foto-9.jpg",
+      img: "foto-9.jpg",
       cat: "Gunung & hutan",
       title: "Kawah yang menyimpan fajar",
       place: "Ijen, Jawa Timur",
@@ -118,7 +118,7 @@ $(function () {
       ratio: 0.9,
     },
     {
-      img: "images/foto-10.jpg",
+      img: "foto-10.jpg",
       cat: "Alam terbuka",
       title: "Savana di ujung musim",
       place: "Baluran, Jawa Timur",
@@ -126,7 +126,7 @@ $(function () {
       ratio: 0.7,
     },
     {
-      img: "images/foto-11.jpg",
+      img: "foto-11.jpg",
       cat: "Keseharian",
       title: "Nelayan dan jaring pagi",
       place: "Wakatobi, Sulawesi Tenggara",
@@ -134,7 +134,7 @@ $(function () {
       ratio: 1.1,
     },
     {
-      img: "images/foto-12.jpg",
+      img: "foto-12.jpg",
       cat: "Budaya & warisan",
       title: "Tarian di halaman pura",
       place: "Gianyar, Bali",
